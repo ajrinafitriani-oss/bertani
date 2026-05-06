@@ -238,8 +238,7 @@ const ceritaPertanian = [
             {
                 // Gambar Babak 5 Aksi 3
                 gambar: "https://images.unsplash.com/photo-1470434767139-71af9eb52924?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwyfHxuaWdodCUyMGZpZWxkfGVufDB8fHx8MTcxNTAwNjA1OHww&ixlib=rb-4.0.3&q=80&w=800",
-                teksAksi: "Presentasi selesai, suara tepuk tangan menggema meriah di ruangan. Saat mereka menatap kagum ke arahmu, suara di dalam kepalamu berbisik:
-",
+                teksAksi: "Presentasi selesai, suara tepuk tangan menggema meriah di ruangan. Saat mereka menatap kagum ke arahmu, suara di dalam kepalamu berbisik:",
                 opsi: [
                     { teks: "'Gila, kapok gue. Ini panggung bukan buat gue.'", skor: 1 },
                     { teks: "'Masih banyak kurangnya, gue jadi ngerasa nggak pantes dipuji gitu.'", skor: 2 },
@@ -458,7 +457,7 @@ const ceritaPertanian = [
             {
                 // NANTI GANTI URL INI DENGAN RENDER BLENDER-MU (Babak 10 Aksi 1)
                 gambar: "https://images.unsplash.com/photo-1515150144380-bca9f1650ed9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHw0fHxtdWRkeSUyMGZpZWxkfGVufDB8fHx8MTcxNTAwNTk3Mnww&ixlib=rb-4.0.3&q=80&w=800",
-                teksAksi: "Sore itu di sebuah kafe urban yang ramai, kamu melihat menu "Healthy Bowl" seharga puluhan ribu menggunakan sayuran impor. Padahal, kamu tahu persis petani lokal membuang sayur kualitas serupa kemarin karena tidak laku.",
+                teksAksi: "Sore itu di sebuah kafe urban yang ramai, kamu melihat menu Healthy Bowl seharga puluhan ribu menggunakan sayuran impor. Padahal, kamu tahu persis petani lokal membuang sayur kualitas serupa kemarin karena tidak laku.",
                 opsi: [
                     { teks: "Lanjut meminum kopimu. 'Ya udah, hukum pasarnya memang begitu.'", skor: 1 },
                     { teks: "Menggeleng pelan. 'Sayang banget sih, tapi mau gimana lagi.'", skor: 2 },
@@ -509,7 +508,7 @@ const ceritaPertanian = [
             {
                 // NANTI GANTI URL INI DENGAN RENDER BLENDER-MU (Babak 11 Aksi 1)
                 gambar: "https://images.unsplash.com/photo-1515150144380-bca9f1650ed9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHw0fHxtdWRkeSUyMGZpZWxkfGVufDB8fHx8MTcxNTAwNTk3Mnww&ixlib=rb-4.0.3&q=80&w=800",
-                teksAksi: "Sore itu di sebuah kafe urban yang ramai, kamu melihat menu "Healthy Bowl" seharga puluhan ribu menggunakan sayuran impor. Padahal, kamu tahu persis petani lokal membuang sayur kualitas serupa kemarin karena tidak laku.",
+                teksAksi: "Sore itu di sebuah kafe urban yang ramai, kamu melihat menu Healthy Bowl seharga puluhan ribu menggunakan sayuran impor. Padahal, kamu tahu persis petani lokal membuang sayur kualitas serupa kemarin karena tidak laku.",
                 opsi: [
                     { teks: "Lanjut meminum kopimu. 'Ya udah, hukum pasarnya memang begitu.'", skor: 1 },
                     { teks: "Menggeleng pelan. 'Sayang banget sih, tapi mau gimana lagi.'", skor: 2 },
