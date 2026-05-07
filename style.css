@@ -119,6 +119,42 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(168, 195, 140, 0.4);
 }
+
+.hasil-akhir-container {
+    text-align: left;
+    max-height: 400px; /* Batasi tinggi agar bisa di-scroll jika kepanjangan */
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.gelar-hasil {
+    color: #c67a3f;
+    font-size: 1.4rem;
+    margin: 15px 0 5px 0;
+}
+
+.quote-hasil {
+    color: #7b9460;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.detail-hasil p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.intro-akhir, .penutup-akhir {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #666;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    margin: 10px 0;
+}
+
 /* Penyesuaian khusus untuk layar HP */
 @media screen and (max-width: 600px) {
     body {

@@ -9,7 +9,7 @@ const ceritaPertanian = [
         aksi: [
             {
                 // NANTI GANTI URL INI DENGAN RENDER BLENDER-MU (Babak 1 Aksi 1)
-                gambar: "https://images.unsplash.com/photo-1515150144380-bca9f1650ed9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHw0fHxtdWRkeSUyMGZpZWxkfGVufDB8fHx8MTcxNTAwNTk3Mnww&ixlib=rb-4.0.3&q=80&w=800",
+                //gambar: "https://images.unsplash.com/photo-1515150144380-bca9f1650ed9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHw0fHxtdWRkeSUyMGZpZWxkfGVufDB8fHx8MTcxNTAwNTk3Mnww&ixlib=rb-4.0.3&q=80&w=800",
                 teksAksi: "Air menggenang. Tanah berubah lumpur. Kamu menatap kosong ke arah lahan yang hancur.",
                 opsi: [
                     { teks: "Menghela napas panjang. 'Udah… ini terlalu ribet buat gue.'", skor: 1 },
@@ -21,7 +21,7 @@ const ceritaPertanian = [
             },
             {
                 // Gambar Babak 1 Aksi 2
-                gambar: "https://images.unsplash.com/photo-1592982537447-6f296b0bd5cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwzfHxvbGQlMjBmYXJtZXJ8ZW58MHx8fHwxNzE1MDA2MDIyfDA&ixlib=rb-4.0.3&q=80&w=800",
+                //gambar: "https://images.unsplash.com/photo-1592982537447-6f296b0bd5cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwzfHxvbGQlMjBmYXJtZXJ8ZW58MHx8fHwxNzE1MDA2MDIyfDA&ixlib=rb-4.0.3&q=80&w=800",
                 teksAksi: "Hujan mulai reda, menyisakan genangan air di mana-mana. Seorang bapak tua, petani lahan sebelah lewat. 'Baru mulai, ya?' katanya santai.",
                 opsi: [
                     { teks: "'Iya... tapi kayaknya saya nggak lanjut Pak'", skor: 1 },
@@ -33,7 +33,7 @@ const ceritaPertanian = [
             },
             {
                 // Gambar Babak 1 Aksi 3
-                gambar: "https://images.unsplash.com/photo-1470434767139-71af9eb52924?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwyfHxuaWdodCUyMGZpZWxkfGVufDB8fHx8MTcxNTAwNjA1OHww&ixlib=rb-4.0.3&q=80&w=800",
+                //gambar: "https://images.unsplash.com/photo-1470434767139-71af9eb52924?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwyfHxuaWdodCUyMGZpZWxkfGVufDB8fHx8MTcxNTAwNjA1OHww&ixlib=rb-4.0.3&q=80&w=800",
                 teksAksi: "Bapak tua itu berlalu, dan malam pun turun. Kamu duduk sendirian di teras. Keputusan itu ada di depanmu.",
                 opsi: [
                     { teks: "Kemasi barang. Cari jalur karir yang lebih pasti besok pagi.", skor: 1 },
@@ -45,7 +45,7 @@ const ceritaPertanian = [
             }
         ],
         transisi: {
-            gambarTransisi: "https://images.unsplash.com/photo-1505934333218-8feea099bbfa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwyfHxqb3VybmFsfGVufDB8fHx8MTcxNTAwNjA5MXww&ixlib=rb-4.0.3&q=80&w=800",
+            //gambarTransisi: "https://images.unsplash.com/photo-1505934333218-8feea099bbfa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwyfHxqb3VybmFsfGVufDB8fHx8MTcxNTAwNjA5MXww&ixlib=rb-4.0.3&q=80&w=800",
             rendah: "Tanah itu terasa asing, bahkan sedikit menolakmu. Kamu mundur sejenak, bukan karena lemah, tapi karena kamu belum siap.",
             sedang: "Kamu berdiri di antara ragu dan harap. Belum yakin ini jalanmu, tapi ada sesuatu yang menahanmu.",
             tinggi: "Hujan itu bukan akhir. Musim ini mungkin mengalahkanmu, tapi ia justru memicu api yang baru."
@@ -60,7 +60,7 @@ const ceritaPertanian = [
         aksi: [
             {
                 // NANTI GANTI URL INI DENGAN RENDER BLENDER-MU (Babak 1 Aksi 1)
-                gambar: "https://images.unsplash.com/photo-1515150144380-bca9f1650ed9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHw0fHxtdWRkeSUyMGZpZWxkfGVufDB8fHx8MTcxNTAwNTk3Mnww&ixlib=rb-4.0.3&q=80&w=800",
+                //gambar: "https://images.unsplash.com/photo-1515150144380-bca9f1650ed9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHw0fHxtdWRkeSUyMGZpZWxkfGVufDB8fHx8MTcxNTAwNTk3Mnww&ixlib=rb-4.0.3&q=80&w=800",
                 teksAksi: "Di tengah hiruk-pikuk lapak, seseorang di sebelahmu berbisik getir, “Kasian ya, yang untung mah bukan mereka.",
                 opsi: [
                     { teks: "'Ya begitulah hukum pasarnya.'", skor: 1 },
@@ -72,7 +72,7 @@ const ceritaPertanian = [
             },
             {
                 // Gambar Babak 2 Aksi 2
-                gambar: "https://images.unsplash.com/photo-1592982537447-6f296b0bd5cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwzfHxvbGQlMjBmYXJtZXJ8ZW58MHx8fHwxNzE1MDA2MDIyfDA&ixlib=rb-4.0.3&q=80&w=800",
+                //gambar: "https://images.unsplash.com/photo-1592982537447-6f296b0bd5cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwzfHxvbGQlMjBmYXJtZXJ8ZW58MHx8fHwxNzE1MDA2MDIyfDA&ixlib=rb-4.0.3&q=80&w=800",
                 teksAksi: "Matahari mulai naik. Lapak mulai sepi, tapi sayur masih sisa banyak. Seorang petani yang kelelahan menatap tumpukan sawinya dan berkata pasrah: “Kalau nggak dijual murah sekarang, ya busuk di jalan.",
                 opsi: [
                     { teks: "'Menunduk, merasa situasi ini terlalu besar untuk kamu campuri.'", skor: 1 },
@@ -84,7 +84,7 @@ const ceritaPertanian = [
             },
             {
                 // Gambar Babak 2 Aksi 3
-                gambar: "https://images.unsplash.com/photo-1470434767139-71af9eb52924?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwyfHxuaWdodCUyMGZpZWxkfGVufDB8fHx8MTcxNTAwNjA1OHww&ixlib=rb-4.0.3&q=80&w=800",
+                //gambar: "https://images.unsplash.com/photo-1470434767139-71af9eb52924?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwyfHxuaWdodCUyMGZpZWxkfGVufDB8fHx8MTcxNTAwNjA1OHww&ixlib=rb-4.0.3&q=80&w=800",
                 teksAksi: "Malamnya, di kamarmu, wajah lelah petani tadi terus berputar di kepala.",
                 opsi: [
                     { teks: "Mengusir pikiran itu cepat-cepat. 'Itu urusan pemerintah, bukan urusan gue.'", skor: 1 },
@@ -96,7 +96,7 @@ const ceritaPertanian = [
             }
         ],
         transisi: {
-            gambarTransisi: "https://images.unsplash.com/photo-1505934333218-8feea099bbfa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwyfHxqb3VybmFsfGVufDB8fHx8MTcxNTAwNjA5MXww&ixlib=rb-4.0.3&q=80&w=800",
+            //gambarTransisi: "https://images.unsplash.com/photo-1505934333218-8feea099bbfa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwyfHxqb3VybmFsfGVufDB8fHx8MTcxNTAwNjA5MXww&ixlib=rb-4.0.3&q=80&w=800",
             rendah: "Kamu melihat ketidakadilan itu, tapi belum merasa terikat. Realitas keras ini terasa terlalu jauh dari jangkauan hidupmu yang sekarang.",
             sedang: "Ada yang mengganggu pikiranmu malam ini. Kamu belum tahu harus melakukan apa, tapi diam-diam, kamu mulai peduli.",
             tinggi: "Masalah ini mendadak terasa sangat personal. Saat orang lain hanya melihat sayur yang layu, kamu mulai melihat dirimu sendiri sebagai bagian dari jalan keluarnya."
@@ -111,7 +111,7 @@ const ceritaPertanian = [
         aksi: [
             {
                 // NANTI GANTI URL INI DENGAN RENDER BLENDER-MU (Babak 1 Aksi 1)
-                gambar: "https://images.unsplash.com/photo-1515150144380-bca9f1650ed9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHw0fHxtdWRkeSUyMGZpZWxkfGVufDB8fHx8MTcxNTAwNTk3Mnww&ixlib=rb-4.0.3&q=80&w=800",
+                //gambar: "https://images.unsplash.com/photo-1515150144380-bca9f1650ed9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHw0fHxtdWRkeSUyMGZpZWxkfGVufDB8fHx8MTcxNTAwNTk3Mnww&ixlib=rb-4.0.3&q=80&w=800",
                 teksAksi: "Seseorang di sampingmu menendang pelan tanah yang berdebu. 'Padahal dulu subur banget... coba lihat keadaannya sekarang,' ucapnya getir.",
                 opsi: [
                     { teks: "Mengangkat bahu. 'Ya, namanya juga alam, pasti ada masa subur dan masa matinya.'", skor: 1 },
@@ -123,7 +123,7 @@ const ceritaPertanian = [
             },
             {
                 // Gambar Babak 3 Aksi 2
-                gambar: "https://images.unsplash.com/photo-1592982537447-6f296b0bd5cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwzfHxvbGQlMjBmYXJtZXJ8ZW58MHx8fHwxNzE1MDA2MDIyfDA&ixlib=rb-4.0.3&q=80&w=800",
+                //gambar: "https://images.unsplash.com/photo-1592982537447-6f296b0bd5cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwzfHxvbGQlMjBmYXJtZXJ8ZW58MHx8fHwxNzE1MDA2MDIyfDA&ixlib=rb-4.0.3&q=80&w=800",
                 teksAksi: "Berjalan lebih jauh, kamu melihat dua lahan percontohan yang bersebelahan. Satu memakai cara lama yang lambat tapi alami, satu lagi disiram bahan kimiawi pekat demi mengejar target panen kilat.",
                 opsi: [
                     { teks: "Mengangguk ke arah lahan kimia. 'Biar bagaimanapun, yang penting cepat panen supaya modal muter.'", skor: 1 },
@@ -135,7 +135,7 @@ const ceritaPertanian = [
             },
             {
                 // Gambar Babak 3 Aksi 3
-                gambar: "https://images.unsplash.com/photo-1470434767139-71af9eb52924?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwyfHxuaWdodCUyMGZpZWxkfGVufDB8fHx8MTcxNTAwNjA1OHww&ixlib=rb-4.0.3&q=80&w=800",
+                //gambar: "https://images.unsplash.com/photo-1470434767139-71af9eb52924?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwyfHxuaWdodCUyMGZpZWxkfGVufDB8fHx8MTcxNTAwNjA1OHww&ixlib=rb-4.0.3&q=80&w=800",
                 teksAksi: "Pemilik lahan akhirnya menawarimu sepetak tanah kosong untuk digarap bulan ini. Kamu harus segera menentukan metode pendekatanmu.",
                 opsi: [
                     { teks: "Beli pupuk kimia berdosis tinggi. 'Gue butuh lihat hasil yang instan.'", skor: 1 },
@@ -147,7 +147,7 @@ const ceritaPertanian = [
             }
         ],
         transisi: {
-            gambarTransisi: "https://images.unsplash.com/photo-1505934333218-8feea099bbfa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwyfHxqb3VybmFsfGVufDB8fHx8MTcxNTAwNjA5MXww&ixlib=rb-4.0.3&q=80&w=800",
+            //gambarTransisi: "https://images.unsplash.com/photo-1505934333218-8feea099bbfa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwyfHxqb3VybmFsfGVufDB8fHx8MTcxNTAwNjA5MXww&ixlib=rb-4.0.3&q=80&w=800",
             rendah: "Bagimu saat ini, alam adalah alat produksi. Fokus utamanya adalah bagaimana tanah ini bisa bertahan dan memberikan hasil yang nyata hari ini.",
             sedang: "Kamu berdiri di persimpangan, mulai melihat hubungan samar antara ambisi manusia dan kelelahan alam.",
             tinggi: "Kamu tidak lagi melihat sepetak tanah, melainkan sesuatu yang jauh lebih besar: sebuah sistem ekologi yang saling bernapas, dan kamu memilih berdiri sebagai penjaganya."
@@ -162,7 +162,7 @@ const ceritaPertanian = [
         aksi: [
             {
                 // NANTI GANTI URL INI DENGAN RENDER BLENDER-MU (Babak 4 Aksi 1)
-                gambar: "https://images.unsplash.com/photo-1515150144380-bca9f1650ed9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHw0fHxtdWRkeSUyMGZpZWxkfGVufDB8fHx8MTcxNTAwNTk3Mnww&ixlib=rb-4.0.3&q=80&w=800",
+                //gambar: "https://images.unsplash.com/photo-1515150144380-bca9f1650ed9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHw0fHxtdWRkeSUyMGZpZWxkfGVufDB8fHx8MTcxNTAwNTk3Mnww&ixlib=rb-4.0.3&q=80&w=800",
                 teksAksi: "Sore itu di sebuah kafe urban yang ramai, kamu melihat menu 'Healthy Bowl' seharga puluhan ribu menggunakan sayuran impor. Padahal, kamu tahu persis petani lokal membuang sayur kualitas serupa kemarin karena tidak laku.",
                 opsi: [
                     { teks: "Lanjut meminum kopimu. 'Ya udah, hukum pasarnya memang begitu.'", skor: 1 },
@@ -174,7 +174,7 @@ const ceritaPertanian = [
             },
             {
                 // Gambar Babak 4 Aksi 2
-                gambar: "https://images.unsplash.com/photo-1592982537447-6f296b0bd5cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwzfHxvbGQlMjBmYXJtZXJ8ZW58MHx8fHwxNzE1MDA2MDIyfDA&ixlib=rb-4.0.3&q=80&w=800",
+                //gambar: "https://images.unsplash.com/photo-1592982537447-6f296b0bd5cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwzfHxvbGQlMjBmYXJtZXJ8ZW58MHx8fHwxNzE1MDA2MDIyfDA&ixlib=rb-4.0.3&q=80&w=800",
                 teksAksi: "Kamu menceritakan kegelisahan itu ke temanmu di seberang meja. Dia menanggapi santai, 'Kalau menurut lo petani lokal bisa tembus kafe ini, ya coba aja lo yang mulai jembatanin.'",
                 opsi: [
                     { teks: "Tertawa sumbang. 'Ah ribet. Nggak segampang itu.'", skor: 1 },
@@ -186,7 +186,7 @@ const ceritaPertanian = [
             },
             {
                 // Gambar Babak 4 Aksi 3
-                gambar: "https://images.unsplash.com/photo-1470434767139-71af9eb52924?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwyfHxuaWdodCUyMGZpZWxkfGVufDB8fHx8MTcxNTAwNjA1OHww&ixlib=rb-4.0.3&q=80&w=800",
+                //gambar: "https://images.unsplash.com/photo-1470434767139-71af9eb52924?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwyfHxuaWdodCUyMGZpZWxkfGVufDB8fHx8MTcxNTAwNjA1OHww&ixlib=rb-4.0.3&q=80&w=800",
                 teksAksi: "Malam harinya di kamar, ide-ide liar mulai berdesakan di kepalamu. Kamu membuka buku catatan kosong di atas meja kerjamu.",
                 opsi: [
                     { teks: "Menatapnya sebentar, lalu menutupnya lagi. 'Nggak usah ngadi-ngadi deh gue.'", skor: 1 },
@@ -198,7 +198,7 @@ const ceritaPertanian = [
             }
         ],
         transisi: {
-            gambarTransisi: "https://images.unsplash.com/photo-1505934333218-8feea099bbfa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwyfHxqb3VybmFsfGVufDB8fHx8MTcxNTAwNjA5MXww&ixlib=rb-4.0.3&q=80&w=800",
+            //gambarTransisi: "https://images.unsplash.com/photo-1505934333218-8feea099bbfa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwyfHxqb3VybmFsfGVufDB8fHx8MTcxNTAwNjA5MXww&ixlib=rb-4.0.3&q=80&w=800",
             rendah: "Peluang emas lewat begitu saja di depan matamu. Kamu melihatnya, namun beban untuk mengejarnya terasa terlalu berat.",
             sedang: "Percikan itu mulai ada. Sebuah ketertarikan mulai tumbuh, meski belum cukup kuat untuk memaksamu berlari menembus ketidakpastian.",
             tinggi: "Di balik krisis rantai pasok, insting kreatormu menyala terang. Kamu melihat kemungkinan, dan yang terpenting: kamu bukan tipe orang yang berhenti hanya pada sekadar wacana."
@@ -213,7 +213,7 @@ const ceritaPertanian = [
         aksi: [
             {
                 // NANTI GANTI URL INI DENGAN RENDER BLENDER-MU (Babak 5 Aksi 1)
-                gambar: "https://images.unsplash.com/photo-1515150144380-bca9f1650ed9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHw0fHxtdWRkeSUyMGZpZWxkfGVufDB8fHx8MTcxNTAwNTk3Mnww&ixlib=rb-4.0.3&q=80&w=800",
+                //gambar: "https://images.unsplash.com/photo-1515150144380-bca9f1650ed9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHw0fHxtdWRkeSUyMGZpZWxkfGVufDB8fHx8MTcxNTAwNTk3Mnww&ixlib=rb-4.0.3&q=80&w=800",
                 teksAksi: "Salah satu perwakilan komunitas menepuk pundakmu. 'Gimana kalau kamu aja yang presentasi dan pegang kendali proyek percobaan ini minggu depan?'",
                 opsi: [
                     { teks: "Mundur selangkah, mengangkat tangan. 'Waduh, langsung nolak deh gue. Takut banget gagal.'", skor: 1 },
@@ -225,7 +225,7 @@ const ceritaPertanian = [
             },
             {
                 // Gambar Babak 5 Aksi 2
-                gambar: "https://images.unsplash.com/photo-1592982537447-6f296b0bd5cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwzfHxvbGQlMjBmYXJtZXJ8ZW58MHx8fHwxNzE1MDA2MDIyfDA&ixlib=rb-4.0.3&q=80&w=800",
+                //gambar: "https://images.unsplash.com/photo-1592982537447-6f296b0bd5cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwzfHxvbGQlMjBmYXJtZXJ8ZW58MHx8fHwxNzE1MDA2MDIyfDA&ixlib=rb-4.0.3&q=80&w=800",
                 teksAksi: "Satu minggu berlalu cepat. Kini kamu berdiri di depan, ditatap oleh audiens yang hening menunggu kata pertamamu. Saat kamu mulai berbicara...",
                 opsi: [
                     { teks: "Suaramu terdengar bergetar dan sangat pelan.", skor: 1 },
@@ -237,7 +237,7 @@ const ceritaPertanian = [
             },
             {
                 // Gambar Babak 5 Aksi 3
-                gambar: "https://images.unsplash.com/photo-1470434767139-71af9eb52924?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwyfHxuaWdodCUyMGZpZWxkfGVufDB8fHx8MTcxNTAwNjA1OHww&ixlib=rb-4.0.3&q=80&w=800",
+                //gambar: "https://images.unsplash.com/photo-1470434767139-71af9eb52924?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwyfHxuaWdodCUyMGZpZWxkfGVufDB8fHx8MTcxNTAwNjA1OHww&ixlib=rb-4.0.3&q=80&w=800",
                 teksAksi: "Presentasi selesai, suara tepuk tangan menggema meriah di ruangan. Saat mereka menatap kagum ke arahmu, suara di dalam kepalamu berbisik:",
                 opsi: [
                     { teks: "'Gila, kapok gue. Ini panggung bukan buat gue.'", skor: 1 },
@@ -249,7 +249,7 @@ const ceritaPertanian = [
             }
         ],
         transisi: {
-            gambarTransisi: "https://images.unsplash.com/photo-1505934333218-8feea099bbfa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwyfHxqb3VybmFsfGVufDB8fHx8MTcxNTAwNjA5MXww&ixlib=rb-4.0.3&q=80&w=800",
+            //gambarTransisi: "https://images.unsplash.com/photo-1505934333218-8feea099bbfa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwyfHxqb3VybmFsfGVufDB8fHx8MTcxNTAwNjA5MXww&ixlib=rb-4.0.3&q=80&w=800",
             rendah: "Kamu masih sering mempertanyakan suaramu sendiri, bahkan di saat dunia siap untuk mendengarkan. Zona nyaman mengunci langkahmu rapat-rapat.",
             sedang: "Kamu memberanikan diri mengambil langkah pertama keluar dari bayang-bayang, meski langkah itu masih terasa gamang.",
             tinggi: "Kepercayaan dirimu menyala bagai nyala suar di tengah kegelapan. Kamu meyakini satu hal penting: kamu punya kapasitas yang sangat cukup untuk memimpin perubahan ini."
@@ -417,136 +417,136 @@ const ceritaPertanian = [
             },
             {
                 // Gambar Babak 9 Aksi 2
-                gambar: "https://images.unsplash.com/photo-1592982537447-6f296b0bd5cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwzfHxvbGQlMjBmYXJtZXJ8ZW58MHx8fHwxNzE1MDA2MDIyfDA&ixlib=rb-4.0.3&q=80&w=800",
+                //gambar: "https://images.unsplash.com/photo-1592982537447-6f296b0bd5cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwzfHxvbGQlMjBmYXJtZXJ8ZW58MHx8fHwxNzE1MDA2MDIyfDA&ixlib=rb-4.0.3&q=80&w=800",
                 teksAksi: "Saat uji coba pertama, layar kontrol mendadak memunculkan kode error merah. Sinyal sensor tanah di lahan tidak bisa terhubung dengan sistem pusat.",
                 opsi: [
-                    { teks: "Tertawa sumbang. 'Ah ribet. Nggak segampang itu.'", skor: 1 },
-                    { teks: "Bersandar ke kursi. 'Nanti aja deh, gue belum kepikiran.'", skor: 2 },
-                    { teks: "Mengangguk pelan. 'Boleh juga ide lo, tapi gue pikir-pikir dulu.'", skor: 3 },
-                    { teks: "Menyesap kopi cepat-cepat. 'Mungkin gue bisa mulai pitching kecil-kecilan ke satu kafe dulu.'", skor: 4 },
-                    { teks: "Menatap temanmu tajam. 'Lo mau join nggak? Gue mau eksekusi idenya mulai besok.'", skor: 5 }
+                    { teks: "Langsung mematikan sistemnya. 'Udah gue tebak, ujung-ujungnya alat ginian cuma bikin kerjaan makin lama.'", skor: 1 },
+                    { teks: "Mencoba me-restart sebentar, tapi saat error-nya muncul lagi, kamu memutuskan meninggalkannya.", skor: 2 },
+                    { teks: "Meminta tolong teknisi via chat, sambil sesekali mencoba mengutak-atik kabelnya perlahan.", skor: 3 },
+                    { teks: "Menelusuri log error di layar, mencoba beberapa kalibrasi frekuensi sampai datanya berhasil masuk.", skor: 4 },
+                    { teks: "Membongkar sebagian casing sensor, sangat tertantang mencari akar masalah konfigurasi jaringannya sampai benar-benar terselesaikan hari itu juga.", skor: 5 }
                 ]
             },
             {
                 // Gambar Babak 9 Aksi 3
-                gambar: "https://images.unsplash.com/photo-1470434767139-71af9eb52924?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwyfHxuaWdodCUyMGZpZWxkfGVufDB8fHx8MTcxNTAwNjA1OHww&ixlib=rb-4.0.3&q=80&w=800",
-                teksAksi: "Malam harinya di kamar, ide-ide liar mulai berdesakan di kepalamu. Kamu membuka buku catatan kosong di atas meja kerjamu.",
+                //gambar: "https://images.unsplash.com/photo-1470434767139-71af9eb52924?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwyfHxuaWdodCUyMGZpZWxkfGVufDB8fHx8MTcxNTAwNjA1OHww&ixlib=rb-4.0.3&q=80&w=800",
+                teksAksi: "Setelah semuanya akhirnya berjalan, melihat hamparan tanahmu kini tervisualisasi menjadi data digital di layar tablet, kamu bergumam:",
                 opsi: [
-                    { teks: "Menatapnya sebentar, lalu menutupnya lagi. 'Nggak usah ngadi-ngadi deh gue.'", skor: 1 },
-                    { teks: "Menulis satu ide singkat, lalu menyimpannya untuk entah kapan.", skor: 2 },
-                    { teks: "Mencoret-coret ide kasarnya, mengisi halaman dengan wacana.", skor: 3 },
-                    { teks: "Mulai membuat mind-map, merancang rencana bisnis dan target market.", skor: 4 },
-                    { teks: "Membuka laptop, langsung mem-breakdown langkah operasional paling konkret yang harus dilakukan esok pagi.", skor: 5 }
+                    { teks: "'Teknologi begini malah bikin interaksi batin petani dan tanahnya jadi hilang.'", skor: 1 },
+                    { teks: "'Keren sih buat gaya-gayaan, tapi belum kerasa esensial banget.'", skor: 2 },
+                    { teks: "'Lumayan lah buat ngebantu memantau kalau fisik lagi capek keliling kebun.'", skor: 3 },
+                    { teks: "'Ini penting banget. Data ini yang bakal bikin kita nggak selalu bergantung sama tebak-tebakan cuaca.'", skor: 4 },
+                    { teks: "'Ini baru langkah awal. Kalau mau ekosistem kita scale-up tanpa merusak alam, presisi teknologi adalah senjata utamanya.'", skor: 5 }
                 ]
             }
         ],
         transisi: {
-            gambarTransisi: "https://images.unsplash.com/photo-1505934333218-8feea099bbfa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwyfHxqb3VybmFsfGVufDB8fHx8MTcxNTAwNjA5MXww&ixlib=rb-4.0.3&q=80&w=800",
-            rendah: "Peluang emas lewat begitu saja di depan matamu. Kamu melihatnya, namun beban untuk mengejarnya terasa terlalu berat.",
-            sedang: "Percikan itu mulai ada. Sebuah ketertarikan mulai tumbuh, meski belum cukup kuat untuk memaksamu berlari menembus ketidakpastian.",
-            tinggi: "Di balik krisis rantai pasok, insting kreatormu menyala terang. Kamu melihat kemungkinan, dan yang terpenting: kamu bukan tipe orang yang berhenti hanya pada sekadar wacana."
+            //gambarTransisi: "https://images.unsplash.com/photo-1505934333218-8feea099bbfa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwyfHxqb3VybmFsfGVufDB8fHx8MTcxNTAwNjA5MXww&ixlib=rb-4.0.3&q=80&w=800",
+            rendah: "Kamu sangat mempercayai apa yang sudah terbukti. Bagimu, tidak ada layar canggih yang bisa menggantikan insting dan sentuhan langsung tangan manusia pada tanah.",
+            sedang: "Kamu membuka diri pada pembaruan, namun tetap memfilter dengan hati-hati mana yang sekadar tren dan mana yang benar-benar kamu butuhkan.",
+            tinggi: "Kamu tidak takut pada hal baru; kamu memeluk masa depan. Kamu melihat teknologi bukan sebagai pengganti petani, melainkan pendorong (katalisator) untuk evolusi agrikultur."
         }
     },
     {
         babak: 10,
         variabel: "X10",
         tipeKalkulasi: "rata-rata",
-        judul: "Pencarian Jatidiri",
-        pembuka: "Setelah beberapa waktu mengamati, kamu mulai melihat pola. Masalah di lapangan ternyata bukan sekadar keluhan kosong. Kadang… itu adalah sebuah celah.",
+        judul: "Menghubungkan Titik",
+        pembuka: "Malam semakin larut di basecamp. Kamu berdiri sendirian di depan papan tulis besar yang penuh dengan coretan spidol, sticky notes, kuitansi pupuk, dan jurnal cuaca harianmu. Awalnya, semua masalah panen bulan ini terasa seperti kejadian buruk yang datang beruntun secara kebetulan. Namun, menatap papan itu berlama-lama, matamu mulai menangkap sesuatu.",
         aksi: [
             {
                 // NANTI GANTI URL INI DENGAN RENDER BLENDER-MU (Babak 10 Aksi 1)
-                gambar: "https://images.unsplash.com/photo-1515150144380-bca9f1650ed9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHw0fHxtdWRkeSUyMGZpZWxkfGVufDB8fHx8MTcxNTAwNTk3Mnww&ixlib=rb-4.0.3&q=80&w=800",
-                teksAksi: "Sore itu di sebuah kafe urban yang ramai, kamu melihat menu Healthy Bowl seharga puluhan ribu menggunakan sayuran impor. Padahal, kamu tahu persis petani lokal membuang sayur kualitas serupa kemarin karena tidak laku.",
+                //gambar: "https://images.unsplash.com/photo-1515150144380-bca9f1650ed9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHw0fHxtdWRkeSUyMGZpZWxkfGVufDB8fHx8MTcxNTAwNTk3Mnww&ixlib=rb-4.0.3&q=80&w=800",
+                teksAksi: "Tiba-tiba, semuanya masuk akal. Kuitansi pupuk yang membengkak, pola hujan yang aneh bulan ini, dan sayur yang membusuk di gudang... semuanya ternyata saling tarik-menarik. Apa reaksi pertamamu saat melihat kerumitan ini?",
                 opsi: [
-                    { teks: "Lanjut meminum kopimu. 'Ya udah, hukum pasarnya memang begitu.'", skor: 1 },
-                    { teks: "Menggeleng pelan. 'Sayang banget sih, tapi mau gimana lagi.'", skor: 2 },
-                    { teks: "Memperhatikan piring pesanan orang lain. 'Menarik juga ya gap harganya bisa sejauh ini.'", skor: 3 },
-                    { teks: "Duduk tegak. 'Gila, ini peluang. Harusnya sayur lokal kita bisa masuk ke pasar premium.'", skor: 4 },
-                    { teks: "Mengeluarkan ponsel dengan antusias. 'Gue harus bangun sistem buat ngejembatanin ketimpangan ini.'", skor: 5 }
+                    { teks: "Memijat pelipis. 'Terlalu banyak faktor. Mending gue fokus aja ke cara nanam yang bener, sisanya di luar kendali gue.'", skor: 1 },
+                    { teks: "Menghela napas panjang. 'Ribet banget. Tapi ya minimal gue sadar, kalau cuaca lagi parah, modal awal pasti bakal membengkak.'", skor: 2 },
+                    { teks: "Melipat tangan di dada. 'Satu masalah ternyata nular ke masalah lain. Ini nggak bisa diselesaiin satu-satu.'", skor: 3 },
+                    { teks: "Mengambil spidol, mulai menarik garis antar sticky notes. 'Tunggu, kalau distribusi di gudang kita percepat, kerugian pupuk ini sebenarnya bisa ketutup.'", skor: 4 },
+                    { teks: "Menatap papan tulis dengan mata berbinar. 'Ini bukan sekadar kebun. Ini ekosistem besar! Cara kita nanam, kondisi alam, dan kecepatan pasar... semuanya satu napas. Gue nemu polanya.'", skor: 5 }
                 ]
             },
             {
                 // Gambar Babak 10 Aksi 2
-                gambar: "https://images.unsplash.com/photo-1592982537447-6f296b0bd5cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwzfHxvbGQlMjBmYXJtZXJ8ZW58MHx8fHwxNzE1MDA2MDIyfDA&ixlib=rb-4.0.3&q=80&w=800",
-                teksAksi: "Kamu menceritakan kegelisahan itu ke temanmu di seberang meja. Dia menanggapi santai, 'Kalau menurut lo petani lokal bisa tembus kafe ini, ya coba aja lo yang mulai jembatanin.'",
+                //gambar: "https://images.unsplash.com/photo-1592982537447-6f296b0bd5cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwzfHxvbGQlMjBmYXJtZXJ8ZW58MHx8fHwxNzE1MDA2MDIyfDA&ixlib=rb-4.0.3&q=80&w=800",
+                teksAksi: "Keesokan harinya, timmu berdebat panas. Laba proyek bulan ini menipis tajam. Sebagian besar anggota tim mengusulkan solusi cepat dan radikal: pangkas dana perawatan tanah dan kurangi upah harian pekerja.",
                 opsi: [
-                    { teks: "Tertawa sumbang. 'Ah ribet. Nggak segampang itu.'", skor: 1 },
-                    { teks: "Bersandar ke kursi. 'Nanti aja deh, gue belum kepikiran.'", skor: 2 },
-                    { teks: "Mengangguk pelan. 'Boleh juga ide lo, tapi gue pikir-pikir dulu.'", skor: 3 },
-                    { teks: "Menyesap kopi cepat-cepat. 'Mungkin gue bisa mulai pitching kecil-kecilan ke satu kafe dulu.'", skor: 4 },
-                    { teks: "Menatap temanmu tajam. 'Lo mau join nggak? Gue mau eksekusi idenya mulai besok.'", skor: 5 }
+                    { teks: "Mengangguk setuju. 'Logis sih. Kita memang butuh potong pengeluaran secepatnya buat napas bulan ini.'", skor: 1 },
+                    { teks: "Ikut memikirkan opsi pemotongan lain. 'Ya udah, coba kurangin aja dulu pengeluaran yang nggak terlalu mendesak bulan ini.'", skor: 2 },
+                    { teks: "Menyela pelan. 'Tapi kalau upah pekerja dipotong, moral mereka turun, jangan-jangan hasil panen malah makin telat?'", skor: 3 },
+                    { teks: "Mengetuk meja. 'Bentar, masalah kita bukan di biaya operasional, tapi di sistem irigasi yang boros air. Kalau itu yang dibenerin, laba kita otomatis ketolong.'", skor: 4 },
+                    { teks: "Berdiri menatap tim. 'Motong biaya sekarang itu cuma obat penahan sakit. Akar masalahnya ada di strategi pemasaran kita yang terlalu lambat. Kita harus rombak cara jualnya hari ini juga.'", skor: 5 }
                 ]
             },
             {
                 // Gambar Babak 10 Aksi 3
-                gambar: "https://images.unsplash.com/photo-1470434767139-71af9eb52924?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwyfHxuaWdodCUyMGZpZWxkfGVufDB8fHx8MTcxNTAwNjA1OHww&ixlib=rb-4.0.3&q=80&w=800",
-                teksAksi: "Malam harinya di kamar, ide-ide liar mulai berdesakan di kepalamu. Kamu membuka buku catatan kosong di atas meja kerjamu.",
+                //gambar: "https://images.unsplash.com/photo-1470434767139-71af9eb52924?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwyfHxuaWdodCUyMGZpZWxkfGVufDB8fHx8MTcxNTAwNjA1OHww&ixlib=rb-4.0.3&q=80&w=800",
+                teksAksi: "Setelah perdebatan panjang itu selesai, kamu menulis satu kesimpulan di buku catatan pribadimu:",
                 opsi: [
-                    { teks: "Menatapnya sebentar, lalu menutupnya lagi. 'Nggak usah ngadi-ngadi deh gue.'", skor: 1 },
-                    { teks: "Menulis satu ide singkat, lalu menyimpannya untuk entah kapan.", skor: 2 },
-                    { teks: "Mencoret-coret ide kasarnya, mengisi halaman dengan wacana.", skor: 3 },
-                    { teks: "Mulai membuat mind-map, merancang rencana bisnis dan target market.", skor: 4 },
-                    { teks: "Membuka laptop, langsung mem-breakdown langkah operasional paling konkret yang harus dilakukan esok pagi.", skor: 5 }
+                    { teks: "'Intinya pertanian itu simpel: lu rawat tanamannya dengan baik, lu bakal dapet hasil yang baik.'", skor: 1 },
+                    { teks: "'Banyak banget faktor luar yang bikin pusing. Keberhasilan di sini kadang ada faktor hoki-hokiannya.", skor: 2 },
+                    { teks: "'Ternyata sistem ini lumayan rumit. Gue harus hati-hati banget milih prioritas.", skor: 3 },
+                    { teks: "'Setiap daun yang telat dipanen di kebun ini ternyata punya efek domino sampai ke harga jual akhir.", skor: 4 },
+                    { teks: "'Nggak ada satu pun masalah yang berdiri sendiri di sini. Benerin satu elemen berarti gue harus siap ngatur ulang seluruh sistemnya.'", skor: 5 }
                 ]
             }
         ],
         transisi: {
-            gambarTransisi: "https://images.unsplash.com/photo-1505934333218-8feea099bbfa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwyfHxqb3VybmFsfGVufDB8fHx8MTcxNTAwNjA5MXww&ixlib=rb-4.0.3&q=80&w=800",
-            rendah: "Peluang emas lewat begitu saja di depan matamu. Kamu melihatnya, namun beban untuk mengejarnya terasa terlalu berat.",
-            sedang: "Percikan itu mulai ada. Sebuah ketertarikan mulai tumbuh, meski belum cukup kuat untuk memaksamu berlari menembus ketidakpastian.",
-            tinggi: "Di balik krisis rantai pasok, insting kreatormu menyala terang. Kamu melihat kemungkinan, dan yang terpenting: kamu bukan tipe orang yang berhenti hanya pada sekadar wacana."
+            //gambarTransisi: "https://images.unsplash.com/photo-1505934333218-8feea099bbfa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwyfHxqb3VybmFsfGVufDB8fHx8MTcxNTAwNjA5MXww&ixlib=rb-4.0.3&q=80&w=800",
+            rendah: "Kamu melihat dunia dari jendela yang kecil dan aman. Bagimu, memecah masalah menjadi potongan-potongan sederhana adalah cara terbaik agar pikiranmu tidak tenggelam dalam kerumitan.",
+            sedang: "Titik-titik itu mulai terhubung di kepalamu. Kamu menyadari ada jaring laba-laba yang menyelimuti sistem ini, meski kamu masih mencari cara untuk mengurainya.",
+            tinggi: "Pikiranmu melampaui batas petak tanah. Kamu bukan lagi sekadar penanam; kamu adalah arsitek sistem yang melihat bagaimana rintik hujan di ladang bisa mengubah angka-angka di pasar."
         }
     },
     {
         babak: 11,
         variabel: "X11",
         tipeKalkulasi: "rata-rata",
-        judul: "Pencarian Jatidiri",
-        pembuka: "Setelah beberapa waktu mengamati, kamu mulai melihat pola. Masalah di lapangan ternyata bukan sekadar keluhan kosong. Kadang… itu adalah sebuah celah.",
+        judul: "Titik Akhir",
+        pembuka: "Malam puncak sebelum panen raya pertamamu. Saat sebagian besar tim sedang beristirahat di basecamp, handphone beberapa orang berdering berturut-turut. Grup WhatsApp warga desa mendadak ramai. Ada forward video dari pintu air di hulu: tanggul jebol karena hujan deras di gunung, dan debit air cokelat sedang meluap turun ke arah sektor lahan pertanian kalian. Kalian cuma punya waktu sebentar sebelum 'banjir kiriman' itu sampai ke bedengan. Kepanikan pecah seketika. Orang-orang berlarian kebingungan, tidak tahu harus menyelamatkan pompa air dulu, memindahkan karung pupuk, atau segera memanen paksa sayur yang sudah siap. Tanpa sadar, di tengah kekacauan itu, mata beberapa anggota tim menatap ke arahmu.",
         aksi: [
             {
                 // NANTI GANTI URL INI DENGAN RENDER BLENDER-MU (Babak 11 Aksi 1)
-                gambar: "https://images.unsplash.com/photo-1515150144380-bca9f1650ed9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHw0fHxtdWRkeSUyMGZpZWxkfGVufDB8fHx8MTcxNTAwNTk3Mnww&ixlib=rb-4.0.3&q=80&w=800",
-                teksAksi: "Sore itu di sebuah kafe urban yang ramai, kamu melihat menu Healthy Bowl seharga puluhan ribu menggunakan sayuran impor. Padahal, kamu tahu persis petani lokal membuang sayur kualitas serupa kemarin karena tidak laku.",
+                //gambar: "https://images.unsplash.com/photo-1515150144380-bca9f1650ed9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHw0fHxtdWRkeSUyMGZpZWxkfGVufDB8fHx8MTcxNTAwNTk3Mnww&ixlib=rb-4.0.3&q=80&w=800",
+                teksAksi: "Air keruh mulai menggenangi pekarangan basecamp hingga semata kaki. Suara aliran air dari parit terdengar makin deras. Apa reaksi pertamamu saat kepanikan meledak di depan matamu?",
                 opsi: [
-                    { teks: "Lanjut meminum kopimu. 'Ya udah, hukum pasarnya memang begitu.'", skor: 1 },
-                    { teks: "Menggeleng pelan. 'Sayang banget sih, tapi mau gimana lagi.'", skor: 2 },
-                    { teks: "Memperhatikan piring pesanan orang lain. 'Menarik juga ya gap harganya bisa sejauh ini.'", skor: 3 },
-                    { teks: "Duduk tegak. 'Gila, ini peluang. Harusnya sayur lokal kita bisa masuk ke pasar premium.'", skor: 4 },
-                    { teks: "Mengeluarkan ponsel dengan antusias. 'Gue harus bangun sistem buat ngejembatanin ketimpangan ini.'", skor: 5 }
+                    { teks: "Mengecek handphone dengan panik. 'Aduh, mana nih yang lain? Cepet dong di grup ada yang ngasih instruksi harus ngungsiin apa dulu!'", skor: 1 },
+                    { teks: "Fokus pada dirimu sendiri. Bergegas mencabut saklar listrik dan mengangkat barang-barangmu ke atas meja tanpa banyak bicara.", skor: 2 },
+                    { teks: "Menahan lengan teman di sebelahmu yang lari kebingungan. 'Tenang, tenang dulu! Jangan lari-lari ntar kepeleset lumpur!'", skor: 3 },
+                    { teks: "Berteriak cukup keras untuk memecah kebisingan. 'Semuanya kumpul di sini bentar! Kita harus gerak bareng pindahin barang ke tempat tinggi!'", skor: 4 },
+                    { teks: "Melompat ke atas teras yang lebih tinggi agar terlihat. 'Bagi tiga kelompok sekarang! Lo amanin mesin pompa, lo angkat karung pupuk, sisanya ikut gue ambil karung pasir buat nahan air di pintu kebun!'", skor: 5 }
                 ]
             },
             {
                 // Gambar Babak 11 Aksi 2
-                gambar: "https://images.unsplash.com/photo-1592982537447-6f296b0bd5cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwzfHxvbGQlMjBmYXJtZXJ8ZW58MHx8fHwxNzE1MDA2MDIyfDA&ixlib=rb-4.0.3&q=80&w=800",
-                teksAksi: "Kamu menceritakan kegelisahan itu ke temanmu di seberang meja. Dia menanggapi santai, 'Kalau menurut lo petani lokal bisa tembus kafe ini, ya coba aja lo yang mulai jembatanin.'",
+                //gambar: "https://images.unsplash.com/photo-1592982537447-6f296b0bd5cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwzfHxvbGQlMjBmYXJtZXJ8ZW58MHx8fHwxNzE1MDA2MDIyfDA&ixlib=rb-4.0.3&q=80&w=800",
+                teksAksi: "Lumpur mulai masuk merendam area pinggir kebun. Di pintu masuk irigasi utama, dua rekanmu malah berdebat keras saling menyalahkan tentang cara menyusun karung pasir penahan air, sementara genangan air mulai merembes masuk ke lahan sayur.'",
                 opsi: [
-                    { teks: "Tertawa sumbang. 'Ah ribet. Nggak segampang itu.'", skor: 1 },
-                    { teks: "Bersandar ke kursi. 'Nanti aja deh, gue belum kepikiran.'", skor: 2 },
-                    { teks: "Mengangguk pelan. 'Boleh juga ide lo, tapi gue pikir-pikir dulu.'", skor: 3 },
-                    { teks: "Menyesap kopi cepat-cepat. 'Mungkin gue bisa mulai pitching kecil-kecilan ke satu kafe dulu.'", skor: 4 },
-                    { teks: "Menatap temanmu tajam. 'Lo mau join nggak? Gue mau eksekusi idenya mulai besok.'", skor: 5 }
+                    { teks: "Mundur selangkah, membiarkan mereka menyelesaikan debatnya sendiri karena kamu tidak mau ikut campur dan takut salah.", skor: 1 },
+                    { teks: "Menunggu perdebatan mereka mereda sambil memegangi salah satu karung pasir sekuat tenaga menahan arus.", skor: 2 },
+                    { teks: "Menyela dengan nada memohon. 'Udah dong debatnya, ini airnya keburu masuk merendam sayur, tolong tumpuk bareng-bareng!'", skor: 3 },
+                    { teks: "Mendekat dan memberi instruksi cepat. 'Tumpuk menyilang dari sudut yang sana aja, yang bawah dipadetin dulu pakai tanah!'", skor: 4 },
+                    { teks: "Menerobos masuk genangan, merebut karung dari mereka. 'Nggak ada waktu buat debat! Lo pegang sisi kiri, lo injak karung yang ini biar nggak kegeser arus. Tumpuk sekarang!'", skor: 5 }
                 ]
             },
             {
                 // Gambar Babak 11 Aksi 3
-                gambar: "https://images.unsplash.com/photo-1470434767139-71af9eb52924?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwyfHxuaWdodCUyMGZpZWxkfGVufDB8fHx8MTcxNTAwNjA1OHww&ixlib=rb-4.0.3&q=80&w=800",
-                teksAksi: "Malam harinya di kamar, ide-ide liar mulai berdesakan di kepalamu. Kamu membuka buku catatan kosong di atas meja kerjamu.",
+                //gambar: "https://images.unsplash.com/photo-1470434767139-71af9eb52924?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwyfHxuaWdodCUyMGZpZWxkfGVufDB8fHx8MTcxNTAwNjA1OHww&ixlib=rb-4.0.3&q=80&w=800",
+                teksAksi: "Pagi harinya, genangan air mulai surut menyisakan lapisan lumpur tebal di mana-mana. Kalian basah kuyup, kotor, dan kelelahan. Tapi sebagian besar panen kalian berhasil diselamatkan dari rendaman. Saat matahari perlahan naik, seorang anggota tim menepuk pundakmu dengan napas lega. Kamu merespons",
                 opsi: [
-                    { teks: "Menatapnya sebentar, lalu menutupnya lagi. 'Nggak usah ngadi-ngadi deh gue.'", skor: 1 },
-                    { teks: "Menulis satu ide singkat, lalu menyimpannya untuk entah kapan.", skor: 2 },
-                    { teks: "Mencoret-coret ide kasarnya, mengisi halaman dengan wacana.", skor: 3 },
-                    { teks: "Mulai membuat mind-map, merancang rencana bisnis dan target market.", skor: 4 },
-                    { teks: "Membuka laptop, langsung mem-breakdown langkah operasional paling konkret yang harus dilakukan esok pagi.", skor: 5 }
+                    { teks: "'Syukurlah kita semua selamat. Untung semalam ada yang inisiatif ngasih komando buat nahan air, kalau nggak habislah panen kita.'", skor: 1 },
+                    { teks: "'Kerja keras semalaman yang gila. Tapi seenggaknya tugas gue selesai dan alat-alat aman.'", skor: 2 },
+                    { teks: "'Tim ini solid banget. Besok-besok kita harus evaluasi bareng posisi barang biar kalau ada banjir kiriman lagi nggak se-panik tadi.'", skor: 3 },
+                    { teks: "'Kerja bagus semuanya. Besok gue bakal susun ulang jalur drainase darurat biar air dari hulu nggak langsung nabrak kebun kita.'", skor: 4 },
+                    { teks: "'Menepuk baliknya dengan mantap. 'Kalian luar biasa semalam. Semua kerugian bibit yang terendam, gue yang rekap dan tanggung jawab ke pusat. Kalian bersihin badan dan istirahat sekarang.'", skor: 5 }
                 ]
             }
         ],
         transisi: {
-            gambarTransisi: "https://images.unsplash.com/photo-1505934333218-8feea099bbfa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwyfHxqb3VybmFsfGVufDB8fHx8MTcxNTAwNjA5MXww&ixlib=rb-4.0.3&q=80&w=800",
-            rendah: "Peluang emas lewat begitu saja di depan matamu. Kamu melihatnya, namun beban untuk mengejarnya terasa terlalu berat.",
-            sedang: "Percikan itu mulai ada. Sebuah ketertarikan mulai tumbuh, meski belum cukup kuat untuk memaksamu berlari menembus ketidakpastian.",
-            tinggi: "Di balik krisis rantai pasok, insting kreatormu menyala terang. Kamu melihat kemungkinan, dan yang terpenting: kamu bukan tipe orang yang berhenti hanya pada sekadar wacana."
+            //gambarTransisi: "https://images.unsplash.com/photo-1505934333218-8feea099bbfa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NjAwMjJ8MHwxfHNlYXJjaHwyfHxqb3VybmFsfGVufDB8fHx8MTcxNTAwNjA5MXww&ixlib=rb-4.0.3&q=80&w=800",
+            rendah: "Cahaya pagi akhirnya benar-benar memecah kegelapan. Badai telah usai. Kamu berdiri, membersihkan sisa lumpur di tanganmu, dan menatap jauh ke cakrawala.",
+            sedang: "Cahaya pagi akhirnya benar-benar memecah kegelapan. Badai telah usai. Kamu berdiri, membersihkan sisa lumpur di tanganmu, dan menatap jauh ke cakrawala.",
+            tinggi: "Cahaya pagi akhirnya benar-benar memecah kegelapan. Badai telah usai. Kamu berdiri, membersihkan sisa lumpur di tanganmu, dan menatap jauh ke cakrawala."
         }
     }
 ];
@@ -653,34 +653,47 @@ function tampilkanTransisi(teks) {
     btnLanjut.onclick = () => lanjutKeBabakBerikutnya();
     optionsAreaUI.appendChild(btnLanjut);
 }
-// ==========================================
-// DATA 5 HASIL AKHIR KARAKTER
-// ==========================================
+// Data Hasil Akhir yang Lebih Detail [cite: 1, 342-388]
 const profilKarakter = {
     "THE SYSTEMIC AGRIPRENEUR": {
-        gelar: "✨ THE SYSTEMIC AGRIPRENEUR ✨",
-        teks: "Dunia pertanian sangat membutuhkan inovator sepertimu untuk memotong jalur tengkulak dan menyejahterakan petani. Kamu melihat alam bukan sekadar petak sawah, tapi sebuah sistem raksasa yang saling terhubung.",
-        gambar: "https://images.unsplash.com/photo-1542838132-92c53300491e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800"
+        gelar: "THE SYSTEMIC AGRIPRENEUR (Sang Arsitek Rantai Pasok)",
+        quote: "Kamu tidak hanya menanam benih; kamu merancang ekosistem.",
+        profil: "Kamu melihat dunia pertanian bukan dari kacamata petak sawah yang sempit, melainkan sebagai sebuah sistem raksasa yang saling terhubung. Di saat orang lain hanya melihat sayur yang layu, otakmu secara otomatis mencari letak kebocoran di rantai distribusinya. Kamu adaptif, mandiri, dan memiliki insting kreator yang sangat tajam. Kamu menolak terjebak dalam masalah, dan lebih memilih membangun solusi yang bisa terukur dan diulangi.",
+        karir: "Agri-Business Developer, Supply Chain Strategist, atau Founder Startup Agri-tech.",
+        saran: "Teruslah merancang jembatan antara petani lokal di desa dan pasar modern di perkotaan. Masa depan ketahanan pangan kita ada di tangan-tangan pengusaha yang punya nurani sepertimu.",
+        gambar: "URL_GAMBAR_AGRIPRENEUR"
     },
     "THE COMMUNITY ECO-MOBILIZER": {
-        gelar: "✨ THE COMMUNITY ECO-MOBILIZER ✨",
-        teks: "Kekuatan terbesarmu bukanlah pada alat yang kamu pegang, tapi pada orang-orang yang kamu satukan. Teruslah menjadi nyala api yang menggerakkan akar rumput untuk peduli pada pangan lokal.",
-        gambar: "https://images.unsplash.com/photo-1529156069898-49953eb1b5e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800"
+        gelar: "THE COMMUNITY ECO-MOBILIZER (Sang Penggerak Akar Rumput)",
+        quote: "Kekuatan terbesarmu bukanlah pada alat yang kamu pegang, tapi pada orang-orang yang kamu satukan.",
+        profil: "Kamu adalah jantung dari setiap kelompok. Saat kepanikan melanda atau krisis datang, insting pertamamu bukanlah menyelamatkan diri sendiri, melainkan memastikan orang-orang di sekitarmu tetap aman dan terarah. Kamu memiliki empati yang luar biasa tinggi terhadap nasib pekerja lapangan dan lebih suka belajar dari cerita serta pengalaman kolektif daripada sekadar membaca teori kaku.",
+        karir: "Community Development Specialist, Fasilitator Pertanian Desa, Sociopreneur, atau Ketua Koperasi Tani Modern.",
+        saran: "Teruslah menjadi nyala api yang menyatukan. Gunakan suaramu untuk mengedukasi dan mengadvokasi hak-hak petani. Perubahan yang paling abadi selalu dimulai dari akar rumput yang kamu sirami.",
+        gambar: "URL_GAMBAR_MOBILIZER"
     },
     "THE AG-TECH INNOVATOR": {
-        gelar: "✨ THE AG-TECH INNOVATOR ✨",
-        teks: "Kamu membawa masa depan ke atas hamparan tanah. Kamu percaya bahwa efisiensi dan presisi adalah kunci agar kita bisa bertani tanpa harus terus-menerus merusak lahan yang ada.",
-        gambar: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800"
+        gelar: "THE AG-TECH INNOVATOR (Sang Perintis Teknologi)",
+        quote: "Kamu membawa masa depan ke atas hamparan tanah berlumpur.",
+        profil: "Kamu adalah jembatan antara tradisi kuno dan kecerdasan masa depan. Kamu tidak takut gagal dan sangat menyukai eksperimen. Bagi orang lain, drone, sensor cuaca, dan data adalah hal yang rumit, tapi bagimu itu adalah kepingan puzzle yang selama ini hilang. Kamu percaya bahwa efisiensi dan presisi adalah kunci agar kita bisa bertani tanpa harus terus-menerus merusak lahan yang ada.",
+        karir: "Smart-Farming Specialist, Agricultural Drone Pilot, IoT Farm Engineer, atau Peneliti Pertanian Presisi (Precision Agriculture).",
+        saran: "Jangan pedulikan mereka yang bilang 'bertani itu cukup pakai cangkul'. Bawa layarmu ke lapangan, terbangkan idemu, dan buktikan bahwa teknologi adalah katalisator terhebat untuk menyelamatkan bumi kita.",
+        gambar: "URL_GAMBAR_INNOVATOR"
     },
     "THE AGROECOLOGY CHAMPION": {
-        gelar: "✨ THE AGROECOLOGY CHAMPION ✨",
-        teks: "Bumi berbicara, dan kamu mau mendengarnya. Kesabaranmu merawat tanah hari ini dengan organik dan permakultur adalah alasan mengapa generasi berikutnya masih bisa makan dengan layak.",
-        gambar: "https://images.unsplash.com/photo-1595841696650-6e42b262a66e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800"
+        gelar: "THE AGROECOLOGY CHAMPION (Sang Penjaga Keseimbangan Alam)",
+        quote: "Bumi berbicara, dan kamu adalah salah satu dari sedikit orang yang mau mendengarnya.",
+        profil: "Darahmu adalah tanah, dan napasmu adalah alam bebas. Kamu memiliki ketangguhan mental untuk terus berjalan di saat cuaca tidak bersahabat, karena kamu melihat alam bukan sebagai musuh atau pabrik pencetak uang, melainkan sebagai kawan yang harus dirawat. Kamu percaya pada proses jangka panjang, pertanian organik, keberlanjutan ekosistem, dan siklus hidup yang tidak mengeksploitasi.",
+        karir: "Permaculture Designer, Ahli Konservasi Lahan, Konsultan Pertanian Organik, atau Praktisi Regenerative Farming.",
+        saran: "Teruslah biarkan tanganmu kotor oleh tanah. Kesabaranmu merawat bumi hari ini adalah satu-satunya alasan mengapa generasi berikutnya masih bisa memanen makanan yang layak dari atas tanah ini.",
+        gambar: "URL_GAMBAR_CHAMPION"
     },
     "THE AGRARIAN STRATEGIST": {
-        gelar: "✨ THE AGRARIAN STRATEGIST ✨",
-        teks: "Setiap pergerakan besar butuh otak strategis. Kamu membangun fondasi yang presisi, logis, dan tanpa celah. Peta jalanmu memastikan industri ini tidak berjalan ke arah jurang kehancuran.",
-        gambar: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800"
+        gelar: "THE AGRARIAN STRATEGIST (Sang Pemikir di Balik Layar)",
+        quote: "Tanpa petamu, mereka yang di lapangan hanya akan berjalan dalam gelap.",
+        profil: "Kamu mungkin tidak selalu berada di bawah terik matahari, namun peranmu sama krusialnya dengan mereka yang memegang cangkul. Kamu menemukan kedamaian dalam struktur, data, dan literatur. Kamu membangun pemahamanmu seperti merakit fondasi bangunan: presisi, logis, dan tanpa celah. Kamu sangat benci mengambil keputusan secara emosional dan selalu menyandarkan langkahmu pada fakta dan riset yang solid.",
+        karir: "Data Analyst Pertanian, Peneliti Agronomi/Kebijakan Publik, Manajer Logistik Pangan, atau Perancang SOP Pertanian Modern.",
+        saran: "Jangan merasa rendah diri jika kamu tidak selalu berada di kebun berlumpur. Peta jalan, aturan, dan riset-risetmu di balik layar adalah kompas yang memastikan seluruh industri ini tidak berjalan ke arah jurang kehancuran.",
+        gambar: "URL_GAMBAR_STRATEGIST"
     }
 };
 
@@ -725,20 +738,30 @@ function lanjutKeBabakBerikutnya() {
             hasilAkhir = "THE AGRARIAN STRATEGIST";
         }
 
-        // --- TAMPILKAN KE LAYAR ---
-        let profilPemenang = profilKarakter[hasilAkhir]; // Ambil data dari kamus di atas
-        
-        // Ganti gambar dengan gambar karakter final
-        sceneImageUI.src = profilPemenang.gambar; 
-        
-        judulBabakUI.innerText = "Panggilan Karirmu";
-        teksCeritaUI.innerText = "Menghitung data menggunakan algoritma...";
-        optionsAreaUI.innerHTML = "";
-        
-        // Efek delay dramatis 1,5 detik sebelum hasil muncul
+        // Tampilkan hasil akhir ke user// Ganti bagian akhir fungsi lanjutKeBabakBerikutnya() dengan ini:
         setTimeout(() => {
-            teksCeritaUI.innerText = profilPemenang.gelar + "\n\n" + profilPemenang.teks;
-        }, 1500);
+            let p = profilPemenang;
+    
+        // Gunakan innerHTML untuk mengatur layout teks yang panjang 
+            teksCeritaUI.innerHTML = `
+                <div class="hasil-akhir-container">
+                    <p class="intro-akhir">Tanah ini bukan lagi sesuatu yang asing... Ia telah menjadi bagian dari ceritamu.</p>
+                    <h2 class="gelar-hasil">${p.gelar}</h2>
+                    <p class="quote-hasil"><em>"${p.quote}"</em></p>
+            
+                <div class="detail-hasil">
+                    <p><strong>Profilmu:</strong> ${p.profil}</p>
+                    <p><strong>Panggilan Karirmu:</strong> ${p.karir}</p>
+                    <p><strong>Saran Langkah Selanjutnya:</strong> ${p.saran}</p>
+                </div>
+            
+                <p class="penutup-akhir">"bertani rupanya bukan sekadar soal menabur benih... Ini tentang menabur perubahan."</p>
+            </div>
+    `;
+    
+    // Opsional: Hilangkan tombol pilihan jika sudah selesai
+    optionsAreaUI.innerHTML = "<button class='btn-opsi' onclick='location.reload()'>Mulai Lagi ↺</button>";
+}, 1500);
     }
 }
 
