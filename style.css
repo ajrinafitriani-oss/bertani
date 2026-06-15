@@ -1,183 +1,1138 @@
-* {
-    box-sizing: border-box;
-    font-family: 'Quicksand', sans-serif; /* Font membulat & kasual */
+/* ============================================================
+   RESET & BASE
+============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --ink:       #3D2B1F;   /* deep warm brown — replaces near-black */
+  --ink-soft:  #6B5645;   /* lighter brown for body copy */
+  --parchment: #FFF8EC;   /* bright cream background */
+  --parchment-dark: #FBE8CE;
+  --earth:     #F2762E;   /* orange accent (primary) */
+  --earth-light: #F4986B;
+  --moss:      #6FA84B;   /* fresh green */
+  --mist:      #D9C9B0;   /* warm tan — borders, dividers */
+  --gold:      #F4B942;   /* sunny yellow accent */
+  --gold-pale: #FFD976;
+  --warm-white: #FFFDF8;
+  --sky:       #5EC4E0;   /* sky blue accent */
+  --pink:      #F5A8B8;   /* soft pink accent */
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body:    'Montserrat', system-ui, sans-serif;
+  --font-mono:    'Montserrat', system-ui, sans-serif;
+
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
-    /* Latar belakang luar ala sunset/meja */
-    background: linear-gradient(135deg, #e6b981, #d2796e);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    padding: 20px;
+  background-color: var(--ink);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
 }
 
-#diary-wrapper {
-    position: relative;
-    display: flex;
-    max-width: 650px;
-    width: 100%;
-    /* Efek Kertas Jurnal Kotak-kotak */
-    background-color: #fdfbf7;
-    background-image: 
-        linear-gradient(#e5e0d8 1px, transparent 1px),
-        linear-gradient(90deg, #e5e0d8 1px, transparent 1px);
-    background-size: 25px 25px;
-    border-radius: 16px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
-    padding: 30px 40px 40px 60px; /* Padding kiri lebih besar buat binder */
+/* Utility */
+.hidden { display: none !important; }
+
+/* Noise texture overlay (pseudo-element reuse via class) */
+.splash__noise,
+.transition-overlay__noise,
+.result-screen__noise,
+.panel__grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
 }
 
-/* Dekorasi Lubang Binder */
-.binder-holes {
-    position: absolute;
-    left: 20px;
-    top: 40px;
-    bottom: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+/* ============================================================
+   SPLASH SCREEN
+============================================================ */
+.splash {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  overflow: hidden;
+  background: var(--ink);
+  transition: opacity 0.6s var(--ease-in-out), visibility 0.6s;
 }
 
-.hole {
-    width: 18px;
-    height: 18px;
-    background-color: #c4b6a6;
-    border-radius: 50%;
-    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.4);
+.splash.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
-#game-container {
-    width: 100%;
+.splash__image-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1500076656116-558758c991c1?w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  animation: kenBurns 20s ease-in-out infinite alternate;
+  filter: grayscale(20%);
 }
 
-.header {
-    text-align: center;
-    margin-bottom: 20px;
+.splash__image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(61, 43, 31, 0.82) 0%,
+    rgba(111, 168, 75, 0.35) 50%,
+    rgba(61, 43, 31, 0.88) 100%
+  );
 }
 
-#judul-babak {
-    color: #c67a3f; /* Warna Oranye Hangat */
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin: 0;
-    text-shadow: 1px 1px 0px rgba(255,255,255,0.8);
+@keyframes kenBurns {
+  from { transform: scale(1.0) translate(0, 0); }
+  to   { transform: scale(1.08) translate(-1%, 1%); }
 }
 
-/* Kotak untuk Render Blender */
-.scene-image-container {
-    width: 100%;
-    height: 220px;
-    border-radius: 12px;
-    overflow: hidden;
-    margin-bottom: 20px;
-    border: 4px solid #fff;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+.splash__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 2rem;
+  max-width: 540px;
+  animation: fadeUp 1s var(--ease-in-out) 0.3s both;
 }
 
-#scene-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 0.5s ease;
+.splash__eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
 }
 
-#teks-cerita {
-    font-size: 1.15rem;
-    line-height: 1.6;
-    color: #4a4a4a;
-    font-weight: 500;
-    margin-bottom: 25px;
-    background: rgba(255, 255, 255, 0.6);
-    padding: 15px;
-    border-radius: 8px;
+.splash__title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 700;
+  color: var(--parchment);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
 }
 
-/* Style Tombol Pilihan ala Jurnal */
+.splash__subtitle {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: var(--mist);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.splash__divider {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+  margin: 0 auto 1.5rem;
+}
+
+.splash__instruction {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--mist);
+  font-style: italic;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.85rem 2.5rem;
+  background: transparent;
+  border: 1.5px solid var(--gold);
+  color: var(--parchment);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, transform 0.2s var(--ease-spring);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s var(--ease-in-out);
+  z-index: -1;
+}
+
+.btn-primary:hover::before { transform: scaleX(1); }
+.btn-primary:hover { color: var(--ink); }
+.btn-primary:active { transform: scale(0.97); }
+
+.splash__chapter-count {
+  margin-top: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: rgba(217, 201, 176, 0.5);
+  letter-spacing: 0.1em;
+}
+
+/* ============================================================
+   GAME WRAPPER — SPLIT LAYOUT
+============================================================ */
+.game-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  width: 100%;
+  background: var(--parchment);
+}
+
+/* ============================================================
+   LEFT PANEL — IMAGE
+============================================================ */
+.panel--image {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.panel__image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.scene-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.7s var(--ease-in-out);
+  animation: subtleZoom 12s ease-in-out infinite alternate;
+}
+
+.scene-image.fading {
+  opacity: 0;
+}
+
+@keyframes subtleZoom {
+  from { transform: scale(1.0); }
+  to   { transform: scale(1.06); }
+}
+
+.panel__vignette {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(61, 43, 31, 0.25) 0%,
+    transparent 30%,
+    transparent 60%,
+    rgba(61, 43, 31, 0.5) 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Chapter badge */
+.chapter-badge {
+  position: absolute;
+  top: 1.75rem;
+  left: 1.75rem;
+  z-index: 5;
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  background: rgba(61, 43, 31, 0.55);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(244, 185, 66, 0.3);
+  padding: 0.5rem 0.85rem;
+  border-radius: 2px;
+}
+
+.chapter-badge__label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.chapter-badge__number {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--parchment);
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.chapter-badge__slash,
+.chapter-badge__total {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--mist);
+}
+
+/* Progress bar */
+.progress-bar-track {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 5;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(to right, var(--earth), var(--gold));
+  width: 9.09%;
+  transition: width 0.6s var(--ease-in-out);
+}
+
+/* ============================================================
+   RIGHT PANEL — JOURNAL
+============================================================ */
+.panel--journal {
+  background-color: var(--parchment);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* Subtle paper texture via gradient */
+.panel--journal::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 27px,
+      rgba(217, 201, 176, 0.18) 28px
+    );
+  z-index: 0;
+}
+
+.journal__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0 3rem;
+}
+
+.journal__header {
+  padding: 2rem 0 0;
+  border-bottom: 1px solid var(--mist);
+  padding-bottom: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.journal__logo {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--earth);
+}
+
+.journal__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-fade {
+  transition: opacity 0.4s var(--ease-in-out), transform 0.4s var(--ease-in-out);
+}
+
+.content-fade.fade-out-content {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.chapter-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--earth-light);
+  margin-bottom: 0.6rem;
+}
+
+.chapter-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--mist);
+}
+
+.story-text {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--ink-soft);
+  margin-bottom: 2rem;
+  white-space: pre-line;
+}
+
+/* ============================================================
+   OPTION BUTTONS
+============================================================ */
+.options-area {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
 .btn-opsi {
-    display: block;
-    width: 100%;
-    background-color: #fff;
-    color: #7b9460; /* Hijau daun pupus */
-    border: 2px solid #a8c38c;
-    padding: 14px 20px;
-    margin-bottom: 12px;
-    border-radius: 30px; /* Bentuk Pil seperti referensi */
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-    text-align: left;
-    transition: all 0.2s ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  display: block;
+  width: 100%;
+  padding: 0.85rem 1.25rem;
+  text-align: left;
+  background: transparent;
+  border: 1px solid var(--mist);
+  color: var(--ink-soft);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  cursor: pointer;
+  transition:
+    border-color 0.25s,
+    background 0.25s,
+    color 0.25s,
+    transform 0.2s var(--ease-spring),
+    box-shadow 0.25s;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-opsi::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--earth);
+  transform: scaleY(0);
+  transition: transform 0.25s var(--ease-spring);
+  transform-origin: bottom;
 }
 
 .btn-opsi:hover {
-    background-color: #a8c38c;
-    color: #fff;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(168, 195, 140, 0.4);
+  border-color: var(--earth);
+  background: rgba(242, 118, 46, 0.06);
+  color: var(--ink);
+  transform: translateX(4px);
 }
 
+.btn-opsi:hover::before {
+  transform: scaleY(1);
+}
+
+.btn-opsi:active {
+  transform: translateX(2px) scale(0.99);
+}
+
+.btn-opsi.selected {
+  border-color: var(--earth);
+  background: rgba(242, 118, 46, 0.08);
+  color: var(--ink);
+}
+
+/* Journal footer */
+.journal__footer {
+  padding: 1.5rem 0;
+  margin-top: auto;
+}
+
+.journal__footer-line {
+  width: 40px;
+  height: 1px;
+  background: var(--mist);
+}
+
+/* ============================================================
+   TRANSITION OVERLAY
+============================================================ */
+.transition-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ink);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s var(--ease-in-out);
+}
+
+.transition-overlay.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.transition-overlay__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 520px;
+  padding: 2rem;
+  animation: fadeUp 0.7s var(--ease-in-out) 0.3s both;
+}
+
+.transition-overlay__label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.25rem;
+}
+
+.transition-overlay__rule {
+  width: 50px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+  margin: 0 auto 1.75rem;
+}
+
+.transition-overlay__text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  color: var(--parchment);
+  line-height: 1.65;
+  margin-bottom: 3rem;
+}
+
+.btn-lanjut {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem 2rem;
+  background: transparent;
+  border: 1px solid rgba(244, 185, 66, 0.5);
+  color: var(--parchment);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 2px;
+}
+
+.btn-lanjut:hover {
+  border-color: var(--gold);
+  background: rgba(244, 185, 66, 0.1);
+}
+
+.btn-arrow {
+  transition: transform 0.3s var(--ease-spring);
+  display: inline-block;
+}
+
+.btn-lanjut:hover .btn-arrow {
+  transform: translateX(5px);
+}
+
+/* ============================================================
+   RESULT SCREEN
+============================================================ */
+.result-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  padding: 2rem 1rem;
+  background: var(--ink);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.7s var(--ease-in-out);
+}
+
+.result-screen.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.result-screen__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 50%, rgba(111, 168, 75, 0.15) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 80% at 80% 30%, rgba(242, 118, 46, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.result-wrapper {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  max-width: 680px;
+  animation: fadeUp 0.8s var(--ease-in-out) 0.3s both;
+}
+
+.result-intro {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--mist);
+  margin-bottom: 0.3rem;
+}
+
+.result-intro-sub {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: rgba(217, 201, 176, 0.55);
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.05em;
+}
+
+/* ============================================================
+   THE CARD
+============================================================ */
+.card-scene {
+  perspective: 1200px;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto 2.5rem;
+  aspect-ratio: 3/4.4;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.75s cubic-bezier(0.645, 0.045, 0.355, 1);
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* FRONT FACE */
+.card__face--front {
+  background: var(--ink);
+  border: 1px solid rgba(244, 185, 66, 0.2);
+  box-shadow:
+    0 0 0 1px rgba(244, 185, 66, 0.08),
+    0 4px 20px rgba(0, 0, 0, 0.5),
+    0 0 60px rgba(242, 118, 46, 0.08),
+    inset 0 0 80px rgba(61, 43, 31, 0.6);
+}
+
+.card__front-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.55;
+  transition: opacity 0.5s;
+  filter: grayscale(25%);
+}
+
+.card__front-noise {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  z-index: 1;
+}
+
+.card__front-vignette {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(61, 43, 31, 0.3) 0%,
+    transparent 35%,
+    transparent 45%,
+    rgba(61, 43, 31, 0.85) 100%
+  );
+  z-index: 2;
+}
+
+/* Gold glow border animation */
+.card__face--front::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, transparent, rgba(244, 185, 66, 0.6), transparent, rgba(244, 185, 66, 0.3), transparent);
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: 0;
+  pointer-events: none;
+  animation: cardGlow 3s ease-in-out infinite;
+}
+
+@keyframes cardGlow {
+  0%, 100% { opacity: 0.3; }
+  50%       { opacity: 0.7; }
+}
+
+.card__front-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  padding: 1.5rem 1.75rem 1.75rem;
+  text-align: center;
+}
+
+.card__eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+}
+
+.card__title-block {
+  margin-bottom: 1rem;
+}
+
+.card__gelar {
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  font-weight: 700;
+  color: var(--parchment);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.card__divider-ornament {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.75rem 0;
+}
+
+.ornament-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(244, 185, 66, 0.5));
+}
+
+.ornament-line:last-child {
+  background: linear-gradient(to left, transparent, rgba(244, 185, 66, 0.5));
+}
+
+.ornament-icon {
+  font-size: 0.6rem;
+  color: var(--gold);
+}
+
+.card__quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--mist);
+  line-height: 1.55;
+  margin-bottom: 1rem;
+}
+
+.card__flip-hint {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(217, 201, 176, 0.4);
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; }
+  50%       { opacity: 0.9; }
+}
+
+/* BACK FACE */
+.card__face--back {
+  background: var(--parchment);
+  transform: rotateY(180deg);
+  border: 1px solid var(--mist);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
+  overflow-y: auto;
+}
+
+.card__back-content {
+  padding: 2rem 1.75rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__back-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--earth-light);
+  margin-bottom: 0.4rem;
+}
+
+.card__back-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.card__back-rule {
+  width: 100%;
+  height: 1px;
+  background: var(--mist);
+  margin: 1rem 0;
+}
+
+.card__back-body {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.card__back-label {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--earth);
+  margin-bottom: 0.3rem;
+  margin-top: 1rem;
+}
+
+.card__back-label:first-child {
+  margin-top: 0;
+}
+
+.card__back-text {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+/* ============================================================
+   RESULT ACTIONS
+============================================================ */
+.result-actions {
+  margin-bottom: 1.5rem;
+}
+
+.btn-restart {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: transparent;
+  border: 1px solid rgba(217, 201, 176, 0.3);
+  color: var(--mist);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 2px;
+}
+
+.btn-restart:hover {
+  border-color: var(--mist);
+  color: var(--parchment);
+  background: rgba(217, 201, 176, 0.08);
+}
+
+.result-tagline {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: rgba(217, 201, 176, 0.4);
+  line-height: 1.7;
+}
+
+/* ============================================================
+   ANIMATIONS
+============================================================ */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Staggered option buttons */
+.btn-opsi {
+  animation: slideInOption 0.4s var(--ease-in-out) both;
+}
+
+.btn-opsi:nth-child(1) { animation-delay: 0.05s; }
+.btn-opsi:nth-child(2) { animation-delay: 0.1s; }
+.btn-opsi:nth-child(3) { animation-delay: 0.15s; }
+.btn-opsi:nth-child(4) { animation-delay: 0.2s; }
+.btn-opsi:nth-child(5) { animation-delay: 0.25s; }
+
+@keyframes slideInOption {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Card entrance */
+.card-scene {
+  animation: cardEntrance 0.9s var(--ease-spring) 0.6s both;
+}
+
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(30px) rotateX(5deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE
+============================================================ */
+@media (max-width: 768px) {
+  .game-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: 45vh auto;
+  }
+
+  .panel--image {
+    position: relative;
+    height: 45vh;
+    width: 100%;
+  }
+
+  .panel--journal {
+    min-height: auto;
+  }
+
+  .panel--journal::before {
+    display: none;
+  }
+
+  .journal__inner {
+    padding: 0 1.25rem;
+    min-height: auto;
+  }
+
+  .journal__header {
+    padding-top: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .chapter-badge {
+    top: 1rem;
+    left: 1rem;
+    padding: 0.4rem 0.65rem;
+  }
+
+  .splash__title {
+    font-size: 3rem;
+  }
+
+  .card-scene {
+    max-width: 340px;
+    aspect-ratio: 3/4.6;
+  }
+
+  .card__gelar {
+    font-size: 1rem;
+  }
+
+  .transition-overlay__text {
+    font-size: 1.05rem;
+  }
+
+  .result-screen {
+    padding: 1.5rem 0.75rem;
+    align-items: flex-start;
+    padding-top: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .journal__inner {
+    padding: 0 1rem;
+  }
+
+  .chapter-title {
+    font-size: 1.35rem;
+  }
+
+  .btn-opsi {
+    padding: 0.75rem 1rem;
+    font-size: 0.83rem;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+/* ==========================================
+   SIHIR 3D CARD FLIP
+   Taruh di baris paling bawah style.css
+========================================== */
+
+/* Mengatur wadah utama hasil akhir agar rapi */
 .hasil-akhir-container {
-    text-align: left;
-    max-height: 400px; /* Batasi tinggi agar bisa di-scroll jika kepanjangan */
-    overflow-y: auto;
-    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
 }
 
-.gelar-hasil {
-    color: #c67a3f;
-    font-size: 1.4rem;
-    margin: 15px 0 5px 0;
+/* Mengatur ukuran kartu agar proporsional dan responsif di HP */
+.flip-card {
+    background-color: transparent;
+    width: 320px; 
+    height: 450px;
+    max-width: 90vw; /* Agar tidak melebar dari layar HP */
+    perspective: 1000px; /* Jarak kamera 3D */
+    margin: 20px auto;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent; /* Menghilangkan kedip biru saat ditap di HP */
 }
 
-.quote-hasil {
-    color: #7b9460;
-    margin-bottom: 20px;
-    display: block;
+/* Membungkus kedua sisi kartu */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animasi putar yang membal */
+    transform-style: preserve-3d;
 }
 
-.detail-hasil p {
-    font-size: 0.95rem;
-    margin-bottom: 15px;
-    line-height: 1.5;
+/* Kelas yang akan ditambahkan JS saat ditap */
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
 }
 
-.intro-akhir, .penutup-akhir {
-    font-style: italic;
-    font-size: 0.9rem;
-    color: #666;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    padding: 10px 0;
-    margin: 10px 0;
+/* Wujud fisik sisi depan dan belakang */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Sembunyikan bagian belakang saat terbalik (Safari/iOS) */
+    backface-visibility: hidden;
+    border-radius: 15px; /* Membuat sudut membulat */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* Bayangan estetik */
 }
 
-/* Penyesuaian khusus untuk layar HP */
-@media screen and (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
-    
-    #diary-wrapper {
-        padding: 20px 20px 25px 40px; /* Padding kiri dikecilkan sedikit */
-    }
+/* Memutar gambar belakang 180 derajat sejak awal */
+.flip-card-back {
+    transform: rotateY(180deg);
+}
 
-    .binder-holes {
-        left: 10px; /* Lubang binder digeser lebih ke kiri */
-    }
+/* Mengatur gambar agar mengisi kartu penuh */
+.flip-card-front img, .flip-card-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Pakai 'cover' jika gambar ingin dipotong penuhi kotak, atau 'contain' agar tidak terpotong */
+    border-radius: 15px;
+}
 
-    #judul-babak {
-        font-size: 1.4rem;
-    }
+.petunjuk-tap {
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+    margin-top: 15px;
+    animation: naikTurun 2s infinite ease-in-out;
+}
 
-    #teks-cerita {
-        font-size: 1rem;
-    }
-
-    .scene-image-container {
-        height: 180px; /* Gambar dibuat agak pipih agar tombol muat */
-    }
+/* Animasi petunjuk tap bergerak naik turun */
+@keyframes naikTurun {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
 }

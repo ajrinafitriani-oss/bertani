@@ -1,48 +1,166 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-width=1.0">
-    <title>Jurnal Tanah & Harapan</title>
-    <!-- Import font Quicksand biar manis -->
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jejak di Tanah — Temukan Persona Agrikulturmu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Background buram ala meja kayu/papan -->
-    <div id="diary-wrapper">
-        <!-- Lubang binder buku catatan -->
-        <div class="binder-holes">
-            <div class="hole"></div>
-            <div class="hole"></div>
-            <div class="hole"></div>
-            <div class="hole"></div>
-            <div class="hole"></div>
-        </div>
 
-        <div id="game-container">
-            <!-- Header Jurnal -->
-            <div class="header">
-                <h2 id="judul-babak">Memuat Jurnal...</h2>
-            </div>
-
-            <!-- Tempat Gambar (Render Blender-mu nanti masuk sini) -->
-            <div class="scene-image-container">
-                <img id="scene-image" src="https://via.placeholder.com/600x300/dcedc1/3e5641?text=Memuat+Gambar..." alt="Ilustrasi Cerita">
-            </div>
-
-            <!-- Area Teks Cerita -->
-            <div id="story-area">
-                <p id="teks-cerita"></p>
-            </div>
-
-            <!-- Area Tombol Pilihan -->
-            <div id="options-area">
-                <!-- Tombol di-generate JS -->
-            </div>
-        </div>
+  <!-- ============================================================
+       SPLASH SCREEN
+  ============================================================ -->
+  <div id="splash-screen" class="splash">
+    <div class="splash__noise"></div>
+    <div class="splash__content">
+      <p class="splash__eyebrow">Sebuah Perjalanan Psikologi</p>
+      <h1 class="splash__title">Jejak di Tanah</h1>
+      <p class="splash__subtitle">Temukan peranmu dalam masa depan pertanian Indonesia melalui sebelas babak cerita.</p>
+      <div class="splash__divider"></div>
+      <p class="splash__instruction">Tidak ada jawaban benar atau salah.<br/>Hanya pilihan — dan apa yang tersembunyi di baliknya.</p>
+      <button id="btn-mulai" class="btn-primary">Mulai Perjalanan</button>
+      <p class="splash__chapter-count">11 babak · ~10 menit</p>
     </div>
+    <div class="splash__image-bg">
+      <div class="splash__image-overlay"></div>
+    </div>
+  </div>
 
-    <script src="script.js"></script>
+  <!-- ============================================================
+       MAIN GAME LAYOUT
+  ============================================================ -->
+  <main id="game-wrapper" class="game-wrapper hidden">
+
+    <!-- LEFT PANEL — atmospheric image -->
+    <section class="panel panel--image" id="image-panel">
+      <div class="panel__image-container">
+        <div id="scene-image" class="scene-image" style="background-image: url('https://images.unsplash.com/photo-1560493676-04071c5f467b?w=1200&q=80')"></div>
+        <div class="panel__grain"></div>
+        <div class="panel__vignette"></div>
+      </div>
+      <!-- Chapter badge -->
+      <div class="chapter-badge" id="chapter-badge">
+        <span class="chapter-badge__label">Babak</span>
+        <span class="chapter-badge__number" id="chapter-number">1</span>
+        <span class="chapter-badge__slash">/</span>
+        <span class="chapter-badge__total">11</span>
+      </div>
+      <!-- Progress bar -->
+      <div class="progress-bar-track">
+        <div class="progress-bar-fill" id="progress-bar-fill"></div>
+      </div>
+    </section>
+
+    <!-- RIGHT PANEL — journal text and choices -->
+    <section class="panel panel--journal" id="journal-panel">
+      <div class="journal__inner">
+        <!-- Journal header decoration -->
+        <div class="journal__header">
+          <span class="journal__logo">Jurnal Lapangan</span>
+        </div>
+
+        <!-- Content area (fades in/out) -->
+        <div class="journal__content" id="journal-content">
+          <div class="content-fade" id="content-fade">
+            <!-- Chapter title -->
+            <p class="chapter-eyebrow" id="chapter-eyebrow">Babak 1</p>
+            <h2 class="chapter-title" id="judul-babak">Hujan di Bulan yang Salah</h2>
+            <!-- Story text -->
+            <div class="story-text" id="teks-cerita"></div>
+            <!-- Options -->
+            <div class="options-area" id="options-area"></div>
+          </div>
+        </div>
+
+        <!-- Journal footer decoration -->
+        <div class="journal__footer">
+          <div class="journal__footer-line"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       TRANSITION OVERLAY (between chapters)
+  ============================================================ -->
+  <div id="transition-overlay" class="transition-overlay hidden">
+    <div class="transition-overlay__noise"></div>
+    <div class="transition-overlay__content">
+      <p class="transition-overlay__label">Jurnal Perjalanan</p>
+      <div class="transition-overlay__rule"></div>
+      <p class="transition-overlay__text" id="transition-text"></p>
+      <button id="btn-lanjut" class="btn-lanjut">Lanjutkan Perjalanan <span class="btn-arrow">→</span></button>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PERSONALITY CARD REVEAL (final result)
+  ============================================================ -->
+  <div id="result-screen" class="result-screen hidden">
+    <div class="result-screen__noise"></div>
+    <div class="result-screen__bg"></div>
+
+    <div class="result-wrapper">
+      <p class="result-intro">Tanah ini bukan lagi sesuatu yang asing...</p>
+      <p class="result-intro-sub">Ia telah menjadi bagian dari ceritamu.</p>
+
+      <!-- THE CARD -->
+      <div class="card-scene" id="card-scene">
+        <div class="card" id="personality-card">
+
+          <!-- CARD FRONT -->
+          <div class="card__face card__face--front">
+            <div class="card__front-bg" id="card-front-bg"></div>
+            <div class="card__front-noise"></div>
+            <div class="card__front-vignette"></div>
+            <div class="card__front-content">
+              <p class="card__eyebrow">Persona Agrikultur</p>
+              <div class="card__title-block">
+                <h2 class="card__gelar" id="card-gelar-front"></h2>
+              </div>
+              <div class="card__divider-ornament">
+                <span class="ornament-line"></span>
+                <span class="ornament-icon">✦</span>
+                <span class="ornament-line"></span>
+              </div>
+              <p class="card__quote" id="card-quote-front"></p>
+              <p class="card__flip-hint">Ketuk untuk melihat profilmu →</p>
+            </div>
+          </div>
+
+          <!-- CARD BACK -->
+          <div class="card__face card__face--back">
+            <div class="card__back-content">
+              <div class="card__back-header">
+                <p class="card__back-eyebrow">Profil Lengkap</p>
+                <h3 class="card__back-title" id="card-gelar-back"></h3>
+              </div>
+              <div class="card__back-rule"></div>
+              <div class="card__back-body">
+                <p class="card__back-label">Tentang Kamu</p>
+                <p class="card__back-text" id="card-profil"></p>
+                <p class="card__back-label">Jalur Karir</p>
+                <p class="card__back-text" id="card-karir"></p>
+                <p class="card__back-label">Langkah Selanjutnya</p>
+                <p class="card__back-text" id="card-saran"></p>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- .card -->
+      </div><!-- .card-scene -->
+
+      <div class="result-actions">
+        <button class="btn-restart" onclick="location.reload()">↺ Mulai Lagi</button>
+      </div>
+      <p class="result-tagline">"Bertani rupanya bukan sekadar soal menabur benih...<br/>Ini tentang menabur perubahan."</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
